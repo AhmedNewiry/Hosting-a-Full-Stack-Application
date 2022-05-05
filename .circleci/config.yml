@@ -31,10 +31,10 @@ jobs:
           command: |
             yarn backend:build
       - run:
-          name: Deploy App
+          name: Deploy Frontend
           command: |
             yarn frontend:deploy
       - run:
-          name: Deploy App
+          name: Deploy Backend
           command: |
             yarn backend:deploy
