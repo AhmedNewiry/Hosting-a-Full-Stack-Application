@@ -21,10 +21,10 @@ jobs:
           command: |
             yarn frontend:install
                
+      
       - run:
                 # installing backend dependencies
           name: Back-End Install
-      - run:
           command: |
             yarn backend:install
       - run:
