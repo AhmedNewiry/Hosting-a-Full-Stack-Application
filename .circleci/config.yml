@@ -8,41 +8,42 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-    # preparing circleci environement
+                # preparing circleci environement
       - node/install:
           install-yarn: true
           node-version: '16.13'
       - checkout
       - aws-cli/setup
       - aws-elastic-beanstalk/setup
-      # installing frontend dependencies
       - run:
+                # installing frontend dependencies
           name: Front-End Install
           command: |
             yarn frontend:install
-      # installing frontend dependencies
+                # installing frontend dependencies
       - run:
+                # installing backend dependencies
           name: Back-End Install
       - run:
           command: |
             yarn backend:install
-      # buidling frontend production code
       - run:
+               # buidling frontend production code
           name: Front-End Build
           command: |
             yarn frontend:build
-      # buidling backend production code
       - run:
+              # buidling backend production code
           name: Back-End Build
           command: |
             yarn backend:build
-      # deploying production frontend code to s3 bucket
       - run:
+              # deploying production frontend code to s3 bucket
           name: Deploy Frontend
           command: |
             yarn frontend:deploy
-      # deploying production backend code to elasticbeanstalk
       - run:
+              # deploying production backend code to elasticbeanstalk
           name: Deploy Backend
           command: |
             yarn backend:deploy
