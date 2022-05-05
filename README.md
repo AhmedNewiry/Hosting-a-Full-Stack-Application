@@ -60,6 +60,9 @@ The e2e tests are using Protractor and Jasmine.
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
 
+## you can view the frontend by visiting this link:
+- http://udagram-udacity43.s3-website-us-east-1.amazonaws.com
+
 ## License
 
 [License](LICENSE.txt)
