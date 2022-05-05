@@ -20,7 +20,7 @@ jobs:
           name: Front-End Install
           command: |
             yarn frontend:install
-                # installing frontend dependencies
+               
       - run:
                 # installing backend dependencies
           name: Back-End Install
