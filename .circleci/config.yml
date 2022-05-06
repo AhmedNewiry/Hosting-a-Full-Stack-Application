@@ -48,12 +48,3 @@ jobs:
           name: Deploy Backend
           command: |
             yarn backend:deploy
-workflows:
-  version: 2
-  build_and_deboly:
-    jobs:
-      - build and debloy:
-          filters:
-            branches:
-              only: /main\/.*/
-                
