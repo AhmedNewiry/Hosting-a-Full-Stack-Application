@@ -49,11 +49,11 @@ jobs:
           command: |
             yarn backend:deploy
 workflows:
-  version: 2
+  version: 2.1
   build_and_deboly:
     jobs:
       - build and debloy:
           filters:
             branches:
-              only: /main\/.*/
+              only: main
                 
